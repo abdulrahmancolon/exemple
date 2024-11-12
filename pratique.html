@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة تنقل</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 1;
+            padding: 0;
+        }
+
+        /* شريط التنقل */
+        ul.navbar {
+            list-style-type: none;
+            background-color: #333;
+            margin: 0;
+            padding: 10;
+            overflow: hidden;
+        }
+
+        /* العناصر في الشريط */
+        ul.navbar li {
+            float: right;
+            display: flex;
+        }
+
+        /* الروابط داخل العناصر */
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* تغيير اللون عند المرور */
+        ul.navbar li a:hover {
+            background-color: #ff0000;
+        }
+
+        /* قائمة منبثقة */
+        ul.navbar li ul {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* عرض القوائم المنبثقة عند تمرير الفأرة */
+        ul.navbar li:hover > ul {
+            display: block;
+        }
+
+        /* العناصر في القائمة المنبثقة */
+        ul.navbar li ul li {
+            float: none;      
+        }
+
+        ul.navbar li ul li a {
+            padding: 12px 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <ul class="navbar">
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#">عن الموقع</a></li>
+        <li>
+            <a >الخدمات</a>
+            <!-- قائمة منبثقة -->
+            <ul style="list-style-type: none;">
+                <li><a href="#">خدمة 1</a></li>
+                <li><a href="#">خدمة 2</a></li>
+                <li><a href="#">خدمة 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">اتصل بنا</a></li>
+    </ul>
+
+</body>
+</html>
